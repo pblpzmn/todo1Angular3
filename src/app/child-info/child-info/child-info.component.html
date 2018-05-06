@@ -1,0 +1,7 @@
+<div >
+    <input type="checkbox" (click)="selected(this)" [checked]="this.infoChild.selected" /> 
+    <span appStrike *ngIf="infoChild.selected==true" > {{infoChild.description}} </span> 
+    <span *ngIf="infoChild.selected==false" >{{infoChild.description}} </span>
+    <button (click)="delete()">x</button>
+ </div>
+  
