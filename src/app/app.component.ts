@@ -43,7 +43,8 @@ export class AppComponent {
     });
   }
   callService(http){
-    let url='http://gist.githubusercontent.com/jdjuan/165053e6cb479a840c88e3e94b33e724/raw/4542ef950b2b32fbe2eea0b3df0338ffe67eae12/todo.json';
+    let url='https://gist.githubusercontent.com/jdjuan/165053e6cb479a840c88e3e94b33e724/raw/4542ef950b2b32fbe2eea0b3df0338ffe67eae12/todo.json';
+    //let url='http://gist.githubusercontent.com/jdjuan/165053e6cb479a840c88e3e94b33e724/raw/4542ef950b2b32fbe2eea0b3df0338ffe67eae12/todo.json';//usar esta localmente
     http.get<any>(url).subscribe(data => {
       data.forEach(element => {
         this.infoArr.push({description: element, id: this.arrContId++, selected: false } );
